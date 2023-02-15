@@ -1,0 +1,25 @@
+body{
+    background-color : #2A9D8F;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 350px;
+    background-color: #FFF3B0;
+    padding: 16px;
+}
+input:hover, textarea:hover{
+    border-color: #9E2A2B;
+}
+label{
+    display: block;
+    margin-bottom: 6px;
+}
+input, select{
+    width: 100%;
+    height: 46px;
+    margin-bottom: 16px;
+    padding: 0 10px;
+}
