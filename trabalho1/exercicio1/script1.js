@@ -1,8 +1,3 @@
-// function numero(){
-//     let numeroP
-// }
-
-// 
 
 function valorN(){
     event.preventDefault();
