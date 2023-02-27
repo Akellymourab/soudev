@@ -1,0 +1,48 @@
+
+#sabores{
+    width: 300px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 150px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px #00000015;
+    padding: 16px;
+}
+
+#sabores label{
+    display: block;
+}
+
+#sabores input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    /* border: 2px solid #aa00e3; */
+}
+#sabores input[type="checkbox"]::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 2px solid #aa00e3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    transition-duration: 200ms;
+}
+#sabores input[type="checkbox"]:checked::after{
+    background-color: #aa00e3;
+}
+#sabores input[type="checkbox"]::before{
+    content: "";
+    width: 12px;
+    height: 5px;
+    position: absolute;
+    top: calc(50% - 3px);
+    left: calc(50% - 5px);
+    transform: rotate(-45deg);
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    z-index: 1;
+}
