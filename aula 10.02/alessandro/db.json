@@ -1,0 +1,27 @@
+{
+    "fruta":[
+        { 
+            "id": 1,
+            "nome": "banana",
+            "quantidade": 6
+        },
+        {
+            "id": 2,
+            "nome": "maça",
+            "quantidade": 10
+        },
+        {
+            "id": 3,
+            "nome": "uva",
+            "quantidade": 2
+        }
+    ],
+    "alunos": [
+        {
+            "nome": "nome.value",
+            "email": "email.value",
+            "telefone": "telenone.value",
+            "cidade": "cidade.value"
+        }
+    ]
+}        

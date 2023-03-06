@@ -4,6 +4,7 @@ fetch("https://pokeapi.co/api/v2/pokemon")
     lista.results.forEach(cada => {
         pokemons.innerHTML += `<option value="${cada.url}">${cada.name}</option>`;
     });
+    buscarPokemon()
 })
 
 function buscarPokemon(){
@@ -11,5 +12,6 @@ function buscarPokemon(){
     .then(res => res.json())
     .then(pokemon =>{
         document.querySelector(".pokemon").innerHTML = `<img src="${pokemon.sprites.front_default}">`;
+        document.querySelector
     })
 }
