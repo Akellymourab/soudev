@@ -1,0 +1,48 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "titulo": "calças",
+      "descricao": "skine"
+    },
+    {
+      "id": 3,
+      "titulo": "tenis",
+      "descricao": "casual"
+    },
+    {
+      "id": 4,
+      "titulo": "camisa",
+      "descricao": "gola polo"
+    },
+    {
+      "nome": "bonés",
+      "descricao": "bones em geral",
+      "id": 5
+    },
+    {
+      "nome": "sabdalia",
+      "descricao": "rasteirinha",
+      "id": 6
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "categoria_id": 2,
+      "tamanho": "M",
+      "codigo": "18411649-15",
+      "cor": "preta",
+      "marca": "Gucci",
+      "descricao": "",
+      "valor": 59.9,
+      "titulo": "vestido mide",
+      "quantitade": 10,
+      "imagens": [
+        "imagem2.jpg",
+        "imagem3.jpg"
+      ]
+    }
+  ],
+  "clientes": []
+}
