@@ -1,0 +1,32 @@
+1 - Quero saber quantos alunos possuem a versao 01 do cartao;
+
+2 - Quero saber quantos alunos possuem a versao 02
+
+3 - Quero saber o nome e matricula dos alunos que possuem a versão cartao maior que 04
+
+4 - Quero a quantidade de todos os alunos que começam com FRANCISCO no nome
+
+5 - Quero a quantidade de todos os alunos que possuem o nome MARIA no nome
+
+6 - Quantos alunos foram alterados entre 2021 e 2022
+
+7 - Quais os nome, matricula e data dos alunos alterados em Janeiro de 2022;
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RESPOSTAS : 
+
+1 - SELECT COUNT(*) FROM tabela WHERE cartao_acesso_versao = '01';
+
+2 - SELECT COUNT(*) FROM tabela WHERE cartao_acesso_versao = '02';
+
+3 - SELECT nome, matricula FROM tabela WHERE cartao_acesso_versao > '04';
+
+4 - SELECT COUNT(*) FROM tabela WHERE nome LIKE 'FRANCISCO%';
+
+5 - SELECT COUNT(*) FROM tabela WHERE nome LIKE '%MARIA%';
+
+6 - SELECT COUNT(*) FROM tabela WHERE YEAR(data_alteracao) BETWEEN 2021 AND 2022;
+
+7 - SELECT nome, matricula, data_alteracao FROM tabela WHERE MONTH(data_alteracao) = 1 AND YEAR(data_alteracao) = 2022;
