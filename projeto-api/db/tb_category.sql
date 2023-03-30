@@ -1,0 +1,7 @@
+CREATE TABLE tb_category (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(30) NOT NULL,
+    status INT DEFAULT 1,
+    creat_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    update_at DATETIME NULL
+);
