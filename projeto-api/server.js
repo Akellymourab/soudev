@@ -1,7 +1,15 @@
 const express = require('express');
+const categoryRoutes = require("./resources/category/routes");
+const bannerRoutes = require("./resources/banner/routes")
 
 const app = express();
 
-app.listen(8000, () =>{
-    console.log('---ATIVO---');
+app.use(express.json());
+app.use(categoryRoutes);
+app.use(bannerRoutes);
+
+app.listen(8000, () => {
+    console.log('--------------');
+    console.log('--- ATIVO ---')
+    console.log('--------------');
 });
