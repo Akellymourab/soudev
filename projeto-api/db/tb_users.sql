@@ -1,0 +1,7 @@
+CREATE TABLE tb_user (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR (100) NOT NULL,
+    email VARCHAR (100) UNIQUE,
+    senha VARCHAR (20) NOT NULL ,
+    token VARCHAR (50) NOT NULL
+);

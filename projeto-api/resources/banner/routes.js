@@ -8,6 +8,15 @@ const TABLE_NAME = 'tb_banner';
 const BASE_URL = '/banners';
 
 app.get(BASE_URL, async (req, res) => {
+    let verificadas = pessoasAutorizadas.filter(
+        cada => cada.token === req.headers.token
+    );
+    if (verificadas.length === 0){
+        res.sendStatus(401);
+        return;
+    }
+    
+
     let dados = await database.execute(`SELECT * FROM ${TABLE_NAME}`);
 
     res.send(dados);
@@ -26,7 +35,7 @@ app.post(BASE_URL, async (req, res) => {
 
     let sql = await database.execute(`
         INSERT INTO tb_banner (titulo, descricao, imagem)
-        VALUES ('${corpo.titulo}', '${corpo.descricao}', '${corpo.imagem}')
+        VALUES ('${corpo.title}', '${corpo.description}', '${corpo.image}')
     `);
 
     corpo.id = sql.insertId;
@@ -49,9 +58,9 @@ app.patch(`${BASE_URL}/:id`, async (req, res) => {
 
     await database.execute(`
         UPDATE tb_banner SET
-            titulo='${req.body.titulo || jaExiste[0].titulo}',
-            descricao='${req.body.descricao || jaExiste[0].descricao}',
-            imagem='${req.body.imagem || jaExiste[0].imagem}'
+            titulo='${req.body.title || jaExiste[0].title}',
+            descricao='${req.body.description || jaExiste[0].description}',
+            imagem='${req.body.image || jaExiste[0].image}'
         WHERE id='${req.params.id}'
     `);
 
